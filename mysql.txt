@@ -1,0 +1,9 @@
+create table if not exists Item(
+id int PRIMARY KEY not null AUTO_INCREMENT,
+user_id int not null,
+title varchar(40) not null,
+info varchar(255) not null,
+src varchar(255) not null,
+up_price int,
+under_price int not null,
+foreign key(user_id) references user(id))
